@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit</title>
+</head>
+<body>
+<div id="container">
+<h1>Edit Product {{product_info['products_id']}}</h1>
+<form action="/products/update" method="POST">
+		<label for="name">Name</label>
+		<input id="" type="text" name="name" value="{{product_info['name']}}"/>
+		</br>
+		<label for="description">Description</label>
+		<input id="" type="text" name="description" value="{{product_info['description']}}"/>
+		</br>
+		<label for="price">Price</label>
+		<input id="" type="text" name="price" value="{{product_info['price']}}"/>
+		<input type="hidden" name="id" value="{{product_info['products_id']}}" />
+
+		</br>
+		<input id="button" type="submit" value="Update">
+</form>
+<p><a href ="/">Show</a> | <a href="/">Back</a></p>
+</div>
+</body>
+</html>

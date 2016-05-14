@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Semi-Restful Routes</title>
+	<style type="text/css">
+	</style>
+</head>
+<body>
+	<div id="container">
+	<h1>Product</h1>
+		<table class="table">
+		<thead>
+			<th>Name</th>
+			<th>Description</th>
+			<th>Price</th>
+			<th>Actions</th>
+		</thead>
+		<tbody>
+		{% for product in products %}
+			<tr>
+ 				<td>{{product['name']}}</td>
+				<td>{{product['description']}}</td>
+				<td>{{product['price']}}</td>
+				<td><a href="/show/{{product['products_id']}}"> Show </a> | 
+				<a href="/edit/{{product['products_id']}}">Edit</a> | 
+				<button><a href="/remove/{{product['products_id']}}">Remove</a></button> </td>
+			</tr>
+		{% endfor %}					
+		</tbody>
+	</table>
+<button><a href="/add">Add a new product</a></button>
+</div>
+</body>
+</html>
